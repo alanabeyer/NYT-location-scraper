@@ -1,0 +1,670 @@
+City,Frequency
+New York City,658
+New York State,173
+Los Angeles (Calif),117
+Memphis (Tenn),69
+Chicago (Ill),61
+San Francisco (Calif),52
+Washington (DC),47
+Nashville (Tenn),43
+Atlanta (Ga),40
+Philadelphia (Pa),36
+"Harlem (Manhattan, NY)",29
+Boston (Mass),28
+Houston (Tex),25
+Long Island (NY),23
+Los Angeles County (Calif),22
+El Paso (Tex),22
+"Central Park (Manhattan, NY)",20
+Fulton County (Ga),20
+"Midtown Area (Manhattan, NY)",18
+New Orleans (La),18
+"Upper West Side (Manhattan, NY)",18
+Monterey Park (Calif),18
+Austin (Tex),16
+Louisville (Ky),16
+Kansas City (Mo),16
+Phoenix (Ariz),15
+Miami (Fla),15
+Buffalo (NY),15
+Washington (State),15
+"East Village (Manhattan, NY)",15
+"Times Square and 42nd Street (Manhattan, NY)",14
+Las Vegas (Nev),14
+San Francisco Bay Area (Calif),13
+"Upper East Side (Manhattan, NY)",13
+"Chelsea (Manhattan, NY)",13
+Sacramento (Calif),12
+Denver (Colo),12
+San Diego (Calif),12
+Oakland (Calif),11
+Orlando (Fla),11
+Dallas (Tex),10
+Santa Fe (NM),10
+Seattle (Wash),10
+"Bedford-Stuyvesant (Brooklyn, NY)",10
+Newport News (Va),9
+Palm Springs (Calif),9
+"SoHo (Manhattan, NY)",9
+Portland (Ore),9
+"West Village (Manhattan, NY)",9
+Brownsville (Tex),9
+Pittsburgh (Pa),8
+Albany (NY),8
+Detroit (Mich),8
+Baltimore (Md),8
+"Greenwich Village (Manhattan, NY)",8
+Paterson (NJ),8
+"Financial District (Manhattan, NY)",8
+Charleston (SC),7
+ALBUQUERQUE (NM),7
+Toronto (Ontario),7
+"Fifth Avenue (Manhattan, NY)",7
+Ontario (Canada),7
+"Long Island City (Queens, NY)",7
+"Hell's Kitchen (Manhattan, NY)",7
+East Lansing (Mich),7
+Westchester County (NY),7
+Minneapolis (Minn),7
+Tulsa (Okla),7
+Waco (Tex),7
+Allen (Tex),7
+"Chinatown (Manhattan, NY)",6
+Oklahoma City (Okla),6
+"Brooklyn Heights (Brooklyn, NY)",6
+Walterboro (SC),6
+Montclair (NJ),6
+New York Metropolitan Area,6
+St Louis (Mo),6
+Montauk (NY),6
+Hamptons (NY),6
+Syracuse (NY),5
+Cincinnati (Ohio),5
+"Washington Heights (Manhattan, NY)",5
+Nassau County (NY),5
+Miami-Dade County (Fla),5
+Athens (Greece),5
+"Bushwick (Brooklyn, NY)",5
+San Antonio (Tex),5
+"Williamsburg (Brooklyn, NY)",5
+"Coney Island (Brooklyn, NY)",5
+Alhambra (Calif),5
+"Astoria (Queens, NY)",5
+AMARILLO (TEX),5
+"Sunset Park (Brooklyn, NY)",5
+San Bernardino County (Calif),5
+Rochester (NY),4
+"Forest Hills (Queens, NY)",4
+Hudson River Valley (NY),4
+Milwaukee (Wis),4
+"Corona (Queens, NY)",4
+ALEXANDRIA (VA),4
+Wilmington (Del),4
+Newark (NJ),4
+"TriBeCa (Manhattan, NY)",4
+"Hudson Yards (Manhattan, NY)",4
+Berkeley (Calif),4
+Long Beach (Calif),4
+Tampa (Fla),4
+Colleton County (SC),4
+Charlotte (NC),4
+Vancouver (British Columbia),4
+"Flatiron District (Manhattan, NY)",4
+"Greenpoint (Brooklyn, NY)",4
+Fairfax County (Va),4
+Indianapolis (Ind),4
+Jackson (Miss),4
+"Prospect Park (Brooklyn, NY)",4
+DeKalb County (Ga),4
+Rio de Janeiro (Brazil),4
+ARLINGTON (VA),4
+Farmington (NM),4
+Newburgh (NY),4
+Rockland County (NY),4
+Columbia (SC),4
+Reno (Nev),3
+Manhattan Beach (Calif),3
+"Bruce's Beach (Manhattan Beach, Calif)",3
+Bergen County (NJ),3
+Laredo (Tex),3
+"South Street Seaport (Manhattan, NY)",3
+Princeton (NJ),3
+Santa Barbara (Calif),3
+"Flushing (Queens, NY)",3
+Madison (Wis),3
+Richmond (Va),3
+San Luis Obispo (Calif),3
+Tucson (Ariz),3
+"Willets Point (Queens, NY)",3
+Billings (Mont),3
+Omaha (Neb),3
+"East Harlem (Manhattan, NY)",3
+Des Moines (Iowa),3
+Ottawa (Ontario),3
+"Jamaica (Queens, NY)",3
+San Mateo County (Calif),3
+Peoria (Ill),3
+Scranton (Pa),3
+New Brunswick (NJ),3
+Bridgeport (Conn),3
+Columbia River (Pacific Northwest),3
+San Bernardino (Calif),3
+"Bay Ridge (Brooklyn, NY)",3
+Sarasota (Fla),3
+Colorado Springs (Colo),3
+Manchester (England),3
+"Riverdale (Bronx, NY)",3
+Plains (Ga),3
+Orange County (Fla),3
+Grand Rapids (Mich),3
+Dublin (Ireland),3
+"Carroll Gardens (Brooklyn, NY)",3
+Davenport (Iowa),3
+"Meatpacking District (Manhattan, NY)",3
+Tacoma (Wash),3
+Henrico County (Va),3
+Dinwiddie County (Va),3
+Finger Lakes Region (NY),3
+Augusta (Ga),3
+AKRON (OHIO),3
+Hebron (NY),3
+"High Line (Manhattan, NY)",3
+Cleveland (Tex),3
+Orange County (NY),3
+North Fork (NY),3
+Shelter Island (NY),3
+Sag Harbor (NY),3
+Bucks County (Pa),2
+Fort Lee (NJ),2
+"Prospect Heights (Brooklyn, NY)",2
+Birmingham (Ala),2
+Bernalillo County (NM),2
+Bakersfield (Calif),2
+Burlington (NJ),2
+Erie County (NY),2
+"Riverside Drive (Manhattan, NY)",2
+ALAMEDA COUNTY (CALIF),2
+Florence (Italy),2
+Macon (Ga),2
+ANN ARBOR (MICH),2
+Fort Worth (Tex),2
+Hialeah (Fla),2
+San Jose (Calif),2
+Fort Myers Beach (Fla),2
+Athens (Ga),2
+Scottsdale (Ariz),2
+Fort Lauderdale (Fla),2
+Fort Myers (Fla),2
+Onondaga County (NY),2
+Coxsackie (NY),2
+"Downtown Brooklyn (Brooklyn, NY)",2
+Flint (Mich),2
+Petaluma (Calif),2
+YAKIMA (WASH),2
+"Park Slope (Brooklyn, NY)",2
+Durham (NC),2
+"Ridgewood (Queens, NY)",2
+Brookville (NY),2
+Odessa (Ukraine),2
+Burbank (Calif),2
+Bloomfield (NJ),2
+Lancaster (Tex),2
+WARREN (MICH),2
+Maplewood (NJ),2
+Dutchess County (NY),2
+Sayreville (NJ),2
+Miami Beach (Fla),2
+Salt Lake City (Utah),2
+Birmingham (England),2
+"Manhattan Beach (Brooklyn, NY)",2
+"Rockaway Beach (Queens, NY)",2
+"East New York (Brooklyn, NY)",2
+British Columbia (Canada),2
+Bishopville (SC),2
+Lee County (SC),2
+Al Atarib (Syria),2
+"Clinton Hill (Brooklyn, NY)",2
+Glendale (Ariz),2
+Norwalk (Conn),2
+Mississauga (Ontario),2
+Asheville (NC),2
+"Mott Haven (Bronx, NY)",2
+Hollywood (Calif),2
+Santa Monica (Calif),2
+Ocean County (NJ),2
+Lansing (Mich),2
+Carlsbad (Calif),2
+"Rockefeller Center (Manhattan, NY)",2
+Freehold (NJ),2
+Lake Erie,2
+Hartford (Conn),2
+Shreveport (La),2
+Norman (Okla),2
+Wilmington (NC),2
+"Murray Hill (Manhattan, NY)",2
+Providence (RI),2
+"Morrisania (Bronx, NY)",2
+Saint-Jean-de-Luz (France),2
+"Dumbo (Brooklyn, NY)",2
+Merced County (Calif),2
+"Borough Park (Brooklyn, NY)",2
+Pasadena (Calif),2
+Port Chester (NY),2
+Islandton (SC),2
+Cleveland (Ohio),2
+"Gramercy Park (Manhattan, NY)",2
+Frederick (Md),2
+Baton Rouge (La),2
+"Elmhurst (Queens, NY)",2
+"Bensonhurst (Brooklyn, NY)",2
+"Georgetown (Washington, DC)",2
+Nuevo Laredo (Mexico),2
+"Lower East Side (Manhattan, NY)",2
+"Flatbush (Brooklyn, NY)",2
+Larchmont (NY),2
+San Bernardino Mountains (Calif),2
+Binghamton (NY),2
+Worcester (Mass),2
+"Crown Heights (Brooklyn, NY)",2
+Clinton (NJ),2
+Hayward (Calif),2
+"Hudson Heights (Manhattan, NY)",2
+"Inwood (Manhattan, NY)",2
+Northport (NY),2
+"Lenox Hill (Manhattan, NY)",2
+North Charleston (SC),2
+"Cypress Hills (Brooklyn, NY)",2
+Hutchinson River Parkway,2
+"Wallkill (Ulster County, NY)",2
+Scarsdale (NY),2
+Fort Campbell (Ky),2
+"Turtle Bay (Manhattan, NY)",2
+"Kips Bay (Manhattan, NY)",2
+Briarcliff Manor (NY),2
+"Central Park South (Manhattan, NY)",2
+Lincoln (Neb),2
+Little Rock (Ark),2
+"East Williamsburg (Brooklyn, NY)",2
+Cambridge (England),2
+Raleigh (NC),2
+Springfield (NJ),2
+RICHMOND (IND),2
+Burlington (Vt),2
+Suffolk County (NY),2
+"Jackson Heights (Queens, NY)",2
+Hastings-on-Hudson (NY),2
+East Hampton (NY),2
+Fairfield (Conn),2
+Lyndhurst (NJ),2
+Concord (NH),2
+McAllen (Tex),2
+Fishers Island (NY),2
+Southampton (NY),2
+Southold (NY),2
+Pleasantville (NY),2
+Doylestown (Pa),1
+Upper Arlington (Ohio),1
+"Brent Spence Bridge (Cincinnati, Ohio)",1
+Covington (Ky),1
+Boulder (Colo),1
+George Washington Bridge,1
+"Port Richmond (Staten Island, NY)",1
+Sacramento River (Calif),1
+Irvington (NY),1
+Sacramento County (Calif),1
+"Manhattanville (Manhattan, NY)",1
+SACRAMENTO VALLEY (CALIF),1
+"Audubon Terrace (Manhattan, NY)",1
+Jersey City (NJ),1
+Chatham (NY),1
+"East Bay (San Francisco, Calif)",1
+"Bowery (Manhattan, NY)",1
+McKees Rocks (Pa),1
+Jamestown (NY),1
+Tupelo (Miss),1
+Waukesha (Wis),1
+Waukesha County (Wis),1
+Galveston (Tex),1
+University City (Mo),1
+Rensselaer County (NY),1
+Greenville (SC),1
+New Haven (Conn),1
+Chattanooga (Tenn),1
+Santa Clara County (Calif),1
+"NoMad (Manhattan, NY)",1
+"Sheepshead Bay (Brooklyn, NY)",1
+Garden City (NY),1
+Roswell (NM),1
+Greensboro (NC),1
+"Parkchester (Bronx, NY)",1
+Lycoming County (Pa),1
+Williamsport (Pa),1
+Springfield (Ill),1
+Boston Common,1
+San Diego County (Calif),1
+Arlington Heights (Ill),1
+Madison (Miss),1
+Greene County (NY),1
+Athens (NY),1
+Hudson (NY),1
+Los Angeles River (Calif),1
+Compton Creek (Calif),1
+"Walden Pond (Concord, Mass)",1
+Oakland County (Mich),1
+"Buffalo Bayou (Houston, Tex)",1
+"Ocean Township (Monmouth County, NJ)",1
+Pelham Manor (NY),1
+San Gabriel Mountains,1
+Crystal Lake (Calif),1
+Kenora (Ontario),1
+Beacon (NY),1
+Cold Spring (NY),1
+Aurora (Colo),1
+"Chinatown (Monterey Park, Calif)",1
+Huntington Beach (Calif),1
+Fresno (Calif),1
+Boston (England),1
+"NoHo (Manhattan, NY)",1
+Butler County (Pa),1
+Mobile (Ala),1
+Pasadena (Tex),1
+Chapel Hill (NC),1
+HAMILTON COUNTY (TENN),1
+"Madison Square Park (Manhattan, NY)",1
+Hyde Park (NY),1
+"Maspeth (Queens, NY)",1
+"South Harlem (Manhattan, NY)",1
+"Hunters Point (Queens, NY)",1
+Lafayette (La),1
+Sullivan County (NY),1
+"Canal Street (Manhattan, NY)",1
+Chesapeake Bay,1
+Foster (RI),1
+Asbury Park (NJ),1
+"Avenue of the Americas (Manhattan, NY)",1
+"Red Hook (Brooklyn, NY)",1
+Everett (Wash),1
+Grand Forks (ND),1
+Portsmouth (Va),1
+Lexington (Mass),1
+Mineral (Va),1
+Endicott (NY),1
+OXON HILL (MD),1
+South River Forest (Ga),1
+Frenchtown (NJ),1
+Locust Valley (NY),1
+Caldwell (NJ),1
+Searsport (Me),1
+Oneida (NY),1
+Poughkeepsie (NY),1
+Mount Washington (NH),1
+Clay (NY),1
+Lynchburg (Va),1
+Hilton Head (SC),1
+Mitchelville (SC),1
+Encinitas (Calif),1
+Damascus (Va),1
+Passaic County (NJ),1
+ALLEGHENY COUNTY (PA),1
+Waitsfield (Vt),1
+Washington (Ga),1
+San Mateo (Calif),1
+Middlesex County  (NJ),1
+"Fort Greene (Brooklyn, NY)",1
+Pound Ridge (NY),1
+"Windsor Terrace (Brooklyn, NY)",1
+"Little Italy (Manhattan, NY)",1
+Birmingham (Mich),1
+"Industry City (Brooklyn, NY)",1
+San Clemente (Calif),1
+Bayville (NJ),1
+Ewing Township (NJ),1
+Trenton (NJ),1
+"Lincoln Square (Manhattan, NY)",1
+Daly City (Calif),1
+Huntington Bay (NY),1
+Salem (Mass),1
+Milton (NY),1
+Terra Alta (W Va),1
+Fayette County (W Va),1
+Wildwood (NJ),1
+Myrtle Beach (SC),1
+Kiryas Joel (NY),1
+ADIRONDACK MOUNTAINS (NY),1
+Hunter Mountain (NY),1
+Jean Lafitte (La),1
+Abilene (Tex),1
+Ossining (NY),1
+"Prospect Lefferts Gardens (Brooklyn, NY)",1
+ARMONK (NY),1
+Upper Saddle River (NJ),1
+Wilmore (Ky),1
+Boca Raton (Fla),1
+LaGrange (Ga),1
+Yakima River Valley (Wash),1
+La Plata County (Colo),1
+Sumter County (Ga),1
+Manchester (NH),1
+"NoLIta (Manhattan, NY)",1
+East Chatham (NY),1
+La Quinta (Calif),1
+Lincoln County (Tenn),1
+Topeka (Kan),1
+"Copacabana (Rio de Janeiro, Brazil)",1
+Greensboro (Vt),1
+Craftsbury (Vt),1
+Long Beach (NY),1
+"Marble Hill (Manhattan, NY)",1
+College Park (Md),1
+Fayetteville (Ark),1
+Tempe (Greece),1
+State College (Pa),1
+Frederick County (Md),1
+Put-in-Bay (Ohio),1
+Springfield (Ohio),1
+"Richmond Hill (Queens, NY)",1
+Goshen (NY),1
+San Francisco-Oakland Bay Bridge (Calif),1
+Belleayre Mountain (NY),1
+Hampton County (SC),1
+Bernardsville (NJ),1
+"Yorkville (Manhattan, NY)",1
+Fresno County (Calif),1
+South Bend (Ind),1
+Redmond (Wash),1
+Revelstoke (British Columbia),1
+Seneca Falls (NY),1
+Clarion (Pa),1
+Salinas (Calif),1
+Hunterdon County (NJ),1
+Blacksburg (Va),1
+Columbus (Ohio),1
+Poconos (Pa),1
+Wounded Knee (SD),1
+Pine Ridge Indian Reservation (SD),1
+"Grand Concourse (Bronx, NY)",1
+Burleigh County (ND),1
+Sarasota County (Fla),1
+Hartsville (SC),1
+Portland (Me),1
+"Jacob Riis Park (Queens, NY)",1
+Florence (Ala),1
+Honolulu (Hawaii),1
+Thousand Oaks (Calif),1
+Oak Park (Calif),1
+Cherry Hill (NJ),1
+Baltimore County (Md),1
+Woodlawn (Md),1
+"South Bronx (Bronx, NY)",1
+Camden (NJ),1
+"Hart Island (Bronx, NY)",1
+Murray-Darling Basin (Australia),1
+Fort Pickett (Va),1
+Fort Barfoot (Va),1
+West Reading (Pa),1
+Oceanside (Calif),1
+Santiago de Compostela (Spain),1
+Champlain (NY),1
+Greenville (Miss),1
+Keene (NH),1
+Leesburg (Va),1
+Dayton (Ohio),1
+Kitty Hawk (NC),1
+Concord (Mass),1
+Schenectady (NY),1
+Ridgewood (NJ),1
+Saratoga Springs (NY),1
+Jefferson Parish (La),1
+Santa Monica Mountains National Recreation Area (Calif),1
+Green Bay (Wis),1
+Gary (Ind),1
+Fremont (Calif),1
+Knoxville (Tenn),1
+"Collect Pond Park (Manhattan, NY)",1
+Elizaville (NY),1
+"Brooklyn Navy Yard (Brooklyn, NY)",1
+Red Bank (NJ),1
+"South Beach (Miami Beach, Fla)",1
+Sangre de Cristo Mountains (NM),1
+Questa (NM),1
+Norwich (England),1
+San Rafael (Calif),1
+Macon (Miss),1
+MESA COUNTY (COLO),1
+Manchester Township (NJ),1
+Fauquier County (Va),1
+Maplewood (Mo),1
+Ferguson (Mo),1
+Hutchinson (Kan),1
+San Jose del Cabo (Mexico),1
+Manville (NJ),1
+Howell Township (NJ),1
+"Chinatown (Las Vegas, Nev)",1
+Syosset (NY),1
+Lubbock (Tex),1
+Saint-Andre-de-Roquelongue (France),1
+Buchanan (NY),1
+Clayton (NJ),1
+Glassboro (NJ),1
+Glynn County (Ga),1
+BRUNSWICK (GA),1
+Lancaster (Pa),1
+Washington County (NY),1
+Schuylerville (NY),1
+New York Harbor,1
+Vallejo (Calif),1
+Hoboken (NJ),1
+Fort Edward (NY),1
+SAGINAW (MICH),1
+Ellenville (NY),1
+East Norwalk (Conn),1
+South Norwalk (Conn),1
+"Diamond District (Manhattan, NY)",1
+ANCHORAGE (ALASKA),1
+"Laconia (Bronx, NY)",1
+"Middletown (Orange County, NY)",1
+"Brownsville (Brooklyn, NY)",1
+Coffee County (Ga),1
+George Washington Memorial Parkway,1
+Six Nations of the Grand River (Ontario),1
+"Sunset Boulevard (Los Angeles, Calif)",1
+New Rochelle (NY),1
+Oxnard (Calif),1
+"Governors Island (Manhattan, NY)",1
+Carroll County (Ky),1
+Hamilton (NJ),1
+Atlantic County (NJ),1
+Spokane (Wash),1
+"Tompkins Square Park (Manhattan, NY)",1
+"Union Square (Manhattan, NY)",1
+Woodstock (NY),1
+Fort Lee (Va),1
+Lumberton (NJ),1
+Lynn Haven (Fla),1
+Mount Vernon (NY),1
+"Battery Park City (Manhattan, NY)",1
+Riverside County (Calif),1
+"Bryant Park (Manhattan, NY)",1
+"Tenderloin (San Francisco, Calif)",1
+Santa Rosa (Calif),1
+Carmel (Calif),1
+Florence (Colo),1
+Davis (Calif),1
+Elkhart (Ind),1
+Newport (RI),1
+LAKELAND (FLA),1
+Kerhonkson (NY),1
+Ulster County (NY),1
+Oyster Bay (NY),1
+"Grymes Hill (Staten Island, NY)",1
+Three Mile Island (Pa),1
+ALEXANDRIA (EGYPT),1
+Old Bridge (NJ),1
+Rome (NY),1
+"Billionaires' Row (Manhattan, NY)",1
+White Mountains (NH),1
+CHESAPEAKE (VA),1
+Hatteras Island (NC),1
+Outer Banks (NC),1
+Williamsburg (Va),1
+"Astor Place (Manhattan, NY)",1
+Glendale (Calif),1
+Falls Church (Va),1
+"Dutch Kills (Queens, NY)",1
+Airmont (NY),1
+Ramapo (NY),1
+Bedminster (NJ),1
+Chappaqua (NY),1
+Yuma (Ariz),1
+Boise (Idaho),1
+"Canarsie (Brooklyn, NY)",1
+Palmyra (Ontario),1
+Fort Moore (Ga),1
+Fort Benning (Ga),1
+Atlantic City (NJ),1
+Chicago River,1
+New Hanover County (NC),1
+"Echo Park (Los Angeles, Calif)",1
+Fairfax (Va),1
+George Washington and Jefferson National Forests,1
+Springfield (Mo),1
+Short Hills (NJ),1
+Waynesboro (Ga),1
+Camino de Santiago (Spain),1
+Jacksonville (Fla),1
+Naperville (Ill),1
+Schoharie (NY),1
+"Vista Hermosa Natural Park (Los Angeles, Calif)",1
+Geneva (NY),1
+"Hamilton Heights (Manhattan, NY)",1
+"Sugar Hill (Manhattan, NY)",1
+Huntington (NY),1
+Glen Ridge (NJ),1
+Wichita (Kan),1
+"Roosevelt Island (Manhattan, NY)",1
+"Harlem River (Bronx-Manhattan, NY)",1
+Pittsford (NY),1
+"Bayside (Queens, NY)",1
+"Lafayette Square (Washington, DC)",1
+Mattituck (NY),1
+Mount Pleasant (NY),1
+Sandy Hook (NJ),1
+Bridgehampton (NY),1
+South Fork (NY),1
+Stamford (Conn),1
+Pelham (NY),1
+Mantua Township (NJ),1
+Cobb County (Ga),1
+Edgewater (NJ),1
+Little Ram Island (NY),1
+La Mesa (NM),1
+East Rutherford (NJ),1
+"Battery Park (Manhattan, NY)",1
+Stockton (Calif),1
+"Woodside (Queens, NY)",1
+Hollywood (Fla),1
+Al Hudaydah (Yemen),1
+"Gowanus (Brooklyn, NY)",1
+Newton (NH),1
+Newcastle (Me.),1
+Lebanon (Pa),1
