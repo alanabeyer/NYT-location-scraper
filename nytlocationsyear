@@ -1,0 +1,94 @@
+import requests
+import csv
+import re
+
+
+
+def is_us_location(location):
+    # Check if the location contains any US state abbreviations or major US city names
+    us_state_abbreviations = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
+    major_us_cities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose', 'Austin', 'Jacksonville', 'San Francisco', 'Columbus', 'Fort Worth', 'Indianapolis', 'Charlotte', 'Seattle', 'Denver', 'Washington', 'Boston', 'El Paso', 'Nashville', 'Detroit', 'Portland', 'Memphis', 'Oklahoma City', 'Las Vegas', 'Louisville', 'Baltimore', 'Milwaukee', 'Albuquerque', 'Tucson', 'Fresno', 'Sacramento', 'Kansas City', 'Long Beach', 'Mesa', 'Atlanta', 'Colorado Springs', 'Virginia Beach', 'Raleigh', 'Omaha', 'Miami', 'Oakland', 'Tulsa', 'Minneapolis', 'Cleveland', 'Wichita', 'Arlington', 'New Orleans', 'Bakersfield', 'Tampa', 'Honolulu', 'Aurora', 'Anaheim', 'Santa Ana', 'St. Louis', 'Riverside', 'Corpus Christi', 'Lexington', 'Pittsburgh', 'Anchorage', 'Stockton', 'Cincinnati', 'Saint Paul', 'Toledo', 'Greensboro', 'Newark', 'Plano', 'Henderson', 'Lincoln', 'Buffalo', 'Fort Wayne', 'Jersey City', 'Chula Vista', 'Orlando', 'St. Petersburg', 'Norfolk', 'Chandler', 'Laredo', 'Madison', 'Durham', 'Lubbock', 'Winston-Salem', 'Garland', 'Glendale', 'Hialeah', 'Reno', 'Baton Rouge', 'Irvine', 'Chesapeake', 'Irving', 'Scottsdale', 'North Las Vegas', 'Fremont', 'Gilbert', 'San Bernardino', 'Boise', 'Birmingham', 'Rochester', 'Richmond', 'Spokane', 'Des Moines', 'Montgomery', 'Modesto', 'Fayetteville', 'Tacoma', 'Shreveport', 'Fontana', 'Oxnard', 'Aurora', 'Moreno Valley', 'Akron', 'Yonkers', 'Huntington Beach', 'Little Rock', 'Augusta', 'Amarillo', 'Glendale', 'Mobile', 'Grand Rapids', 'Salt Lake City', 'Tallahassee', 'Huntsville', 'Grand Prairie', 'Knoxville', 'Worcester', 'Newport News', 'Brownsville', 'Overland Park', 'Santa Clarita', 'Providence', 'Garden Grove', 'Chattanooga', 'Oceanside', 'Jackson', 'Fort Lauderdale', 'Santa Rosa', 'Rancho Cucamonga', 'Port St. Lucie', 'Tempe', 'Ontario', 'Vancouver', 'Cape Coral', 'Sioux Falls', 'Springfield', 'Peoria', 'Pembroke Pines', 'Elk Grove', 'Salem', 'Lancaster', 'Corona', 'Eugene', 'Palmdale', 'Salinas', 'Springfield', 'Pasadena', 'Fort Collins', 'Hayward', 'Pomona', 'Cary', 'Rockford', 'Alexandria', 'Escondido', 'McKinney', 'Kansas City', 'Joliet', 'Sunnyvale', 'Torrance', 'Bridgeport', 'Lakewood', 'Hollywood', 'Paterson', 'Naperville', 'Syracuse', 'Mesquite', 'Dayton', 'Savannah', 'Clarksville', 'Orange', 'Pasadena', 'Fullerton', 'Killeen', 'Frisco', 'Hampton', 'McAllen', 'Warren', 'Bellevue', 'West Valley City', 'Columbia', 'Olathe', 'Sterling Heights', 'New Haven', 'Miramar', 'Waco', 'Thousand Oaks', 'Cedar Rapids', 'Charleston', 'Visalia', 'Topeka', 'Elizabeth', 'Gainesville', 'Thornton', 'Roseville', 'Carrollton', 'Coral Springs', 'Stamford', 'Simi Valley', 'Concord', 'Hartford', 'Kent', 'Lafayette', 'Midland', 'Surprise', 'Denton', 'Victorville', 'Evansville', 'Santa Clara', 'Abilene', 'Athens', 'Vallejo', 'Allentown', 'Norman', 'Beaumont', 'Independence', 'Murfreesboro', 'Ann Arbor', 'Springfield', 'Berkeley', 'Peoria', 'Provo', 'El Monte', 'Columbia', 'Lansing', 'Fargo', 'Downey', 'Costa Mesa', 'Wilmington', 'Arvada', 'Inglewood', 'Miami Gardens', 'Carlsbad', 'Westminster', 'Rochester', 'Odessa', 'Manchester', 'Elgin', 'West Jordan', 'Round Rock', 'Clearwater', 'Waterbury', 'Gresham', 'Fairfield', 'Billings', 'Lowell', 'San Buenaventura (Ventura)', 'Pueblo', 'High Point', 'West Covina', 'Richmond', 'Murrieta', 'Cambridge', 'Antioch', 'Temecula', 'Norwalk', 'Centennial', 'Everett', 'Palm Bay', 'Wichita Falls', 'Green Bay', 'Daly City', 'Burbank', 'Richardson', 'Pompano Beach', 'North Charleston', 'Broken Arrow', 'Boulder', 'West Palm Beach', 'Santa Maria', 'El Cajon', 'Davenport', 'Rialto', 'Las Cruces', 'San Mateo', 'Lewisville', 'South Bend', 'Lakeland', 'Erie', 'Tyler', 'Pearland', 'College Station', 'Kenosha', 'Sandy Springs', 'Clovis', 'Flint', 'Roanoke', 'Albany', 'Jurupa Valley', 'Compton', 'San Angelo', 'Hillsboro', 'Lawton', 'Renton', 'Vista', 'Davie', 'Greeley', 'Mission Viejo', 'Portsmouth', 'Dearborn', 'South Gate', 'Tuscaloosa', 'Livonia', 'New Bedford', 'Vacaville', 'Brockton', 'Roswell', 'Beaverton', 'Quincy', 'Sparks', 'Yakima', 'Lees Summit', 'Federal Way', 'Carson', 'Santa Monica', 'Hesperia', 'Allen', 'Rio Rancho', 'Yuma', 'Westminster', 'Orem', 'Lynn', 'Redding', 'Spokane Valley', 'Miami Beach', 'League City', 'Lawrence', 'Santa Barbara', 'Plantation', 'Sandy', 'Sunrise', 'Macon', 'Longmont', 'Boca Raton', 'San Marcos', 'Greenville', 'Waukegan', 'Fall River', 'Chico', 'Newton', 'Jackson', 'Fort Myers', 'Dearborn Heights', 'Apple Valley', 'Taylorsville', 'Lancaster', 'Gary', 'Scranton', 'Pocatello', 'Madera', 'Meridian', 'Davis', 'Burlington', 'Lake Charles', 'Palm Coast', 'Lynchburg', 'Deltona', 'Roanoke', 'Citrus Heights', 'Redlands', 'Frederick', 'Weston', 'Mansfield', 'Pleasanton', 'St. George', 'Carmel', 'Alhambra', 'North Miami', 'Pawtucket', 'Waldorf', 'Hemet', 'Fishers', 'Tinley Park', 'Lakewood', 'Merced', 'Lehigh Acres', 'Mount Vernon', 'West Allis', 'Dubuque', 'Lawrence', 'Quincy', 'San Ramon', 'Ellicott City', 'Idaho Falls', 'Edmond', 'Oshkosh', 'Edinburg', 'Cranston', 'Enid', 'Lakewood', 'Mission', 'Jupiter', 'Gardena', 'Camarillo', 'St. Cloud', 'Maple Grove', 'Great Falls', 'Canton', 'Rock Hill', 'Redondo Beach', 'Perris', 'Montebello', 'Auburn', 'Kettering', 'Arcadia', 'Bradenton', 'Skokie', 'Diamond Bar', 'Council Bluffs', 'Hamilton', 'Blaine', 'National City', 'Lawrence', 'San Clemente', 'Woodbury', 'Davenport', 'Sarasota', 'Aliso Viejo', 'Pittsburg', 'Yorba Linda', 'Casper', 'Loveland', 'Harrisburg', 'Elkhart', 'DeSoto', 'Minnetonka', 'Galveston', 'Cedar Park', 'Texas City', 'St. Louis Park', 'Broomfield', 'Rockville', 'Rancho Cordova', 'Ankeny', 'Rialto', 'Janesville', 'Summerville', 'Wauwatosa', 'Salem', 'Mishawaka', 'Casa Grande', 'Sierra Vista', 'Lacey', 'Delray Beach', 'Bartlett', 'Kearny', 'Holyoke', 'Titusville', 'Cottage Grove', 'Commerce City', 'Haltom City', 'Monroe', 'Cupertino', 'Garden Grove', 'Montclair', 'Wheeling', 'Grand Island', 'Kingsport', 'Belleville', 'Mount Prospect', 'Sherman', 'Chesterfield', 'Leander', 'Bossier City', 'Cedar Hill', 'Mansfield', 'Binghamton', 'Covington', 'North Miami Beach', 'Parker', 'Bedford', 'Casa Adobes', 'Burien', 'Oak Park', 'North Little Rock', 'Palm Springs', 'North Port', 'Euless', 'Conway', 'Lakeville', 'Hoboken', 'Stanton', 'Richland', 'Cupertino', 'Westerville', 'Brentwood', 'Findlay', 'Greenwood', 'San Rafael', 'Bell Gardens', 'Cleveland Heights', 'Peabody', 'San Luis Obispo', 'Tigard', 'Brookhaven', 'DeKalb', 'Rancho Santa Margarita', 'Albany', 'Noblesville', 'Gaithersburg', 'Monterey Park', 'Coconut Creek', 'Dublin', 'Valdosta', 'Rocky Mount', 'Commerce City', 'Littleton', 'Oak Lawn', 'Diamond Bar', 'Fountain Valley', 'Beloit', 'Florissant', 'Petaluma', 'Cerritos', 'San Jacinto', 'Gardner', 'Greenfield', 'Rowlett', 'La Puente', 'Glenview', 'Bartlett', 'Huntington Park', 'Lancaster', 'Gilroy', 'Aliso Viejo', 'Annapolis', 'Westfield', 'Kearns', 'El Centro', 'Wheaton', 'Brookfield', 'Moorhead', 'Madison', 'Clifton', 'Goose Creek', 'Kentwood', 'Romeoville', 'Palm Desert', 'Edina', 'Columbus', 'Lincoln', 'Homestead', 'Alameda', 'Norwich', 'Aventura', 'Waterloo', 'Royal Oak', 'Lake Havasu City', 'Leesburg', 'Lodi', 'Vineland', 'Haltom City', 'Battle Creek', 'Novato', 'White Plains', 'Cathedral City', 'Shakopee', 'Paramount', 'Arcadia', 'North Richland Hills', 'Lakewood', 'West Sacramento', 'Portland', 'Smyrna', 'Smyrna', 'Dover', 'Chester', 'Lawrence', 'Carson City', 'Shoreline', 'Calexico', 'Porterville', 'Albuquerque', 'Plainfield', 'Woodland', 'White Plains', 'Mount Pleasant', 'Novi', 'Yucaipa', 'Waukesha', 'Iowa City', 'Blue Springs', 'Rock Hill', 'Perris', 'Dunwoody', 'San Gabriel', 'Poway', 'Rocklin', 'West Hollywood', 'Dearborn Heights', 'Tigard', 'Pasco', 'Redmond', 'San Marcos', 'Orland Park', 'Rosemead', 'Tinley Park', 'Oak Lawn', 'Novi', 'Sarasota', 'Edina', 'Hendersonville', 'Southaven', 'Maplewood', 'Castle Rock', 'Hanover Park', 'Binghamton', 'Diamond Bar', 'Eastvale', 'Titusville', 'Bullhead City', 'Rancho Palos Verdes', 'Tigard', 'East Lansing', 'La Mirada', 'Collierville', 'Portage', 'West Hollywood', 'West Sacramento', 'Rowlett', 'Paramount', 'La Habra', 'Poway', 'Gardena', 'Lancaster', 'Malden', 'New Braunfels', 'Aliso Viejo', 'Franklin', 'Albany', 'Citrus Heights', 'Harrisonburg', 'St. Louis Park', 'Coconut Creek', 'Euclid', 'Broomfield', 'Crystal Lake', 'Marana', 'Cerritos', 'Cupertino', 'La Puente', 'Draper', 'La Quinta', 'Fountain', 'Rockwall', 'Apopka', 'Coppell', 'Santee', 'Doral', 'Wilson', 'Canton', 'Cypress', 'Palm Springs', 'Aliso Viejo', 'Hutchinson', 'Apex', 'Columbus', 'Covington', 'Brea', 'North Miami Beach', 'Wheeling', 'Park Ridge', 'Euless', 'La Mesa', 'Cypress', 'Lincoln', 'Bellevue', 'Cooper City', 'West New York', 'Saginaw', 'Hurst', 'Columbia', 'El Centro', 'Bowie', 'Sierra Vista', 'Smyrna', 'West Haven', 'Lacey', 'Kettering', 'Columbus', 'Midwest City', 'Addison', 'West Allis', 'Midvale', 'Tupelo', 'Gaithersburg', 'Grand Island', 'Coconut Creek', 'Fitchburg', 'Aventura', 'Royal Oak', 'North Richland Hills', 'Wheaton', 'Concord', 'North Little Rock', 'Ankeny', 'Chapel Hill', 'Strongsville', 'Rosemead', 'Rancho Palos Verdes', 'Manhattan Beach', 'Chesterfield', 'Southaven', 'West Lafayette', 'Logan', 'Streamwood', 'Farmington', 'Springville', 'Sherman', 'Cedar Falls', 'Claremont', 'Marlborough', 'Huntersville', 'Bartlett', 'Encinitas', 'Tigard', 'Niagara Falls', 'Belleville', 'Golden', 'West Sacramento', 'New Berlin', 'Cleveland Heights', 'Orland Park', 'Pinellas Park', 'Aurora', 'Northglenn', 'Greenfield', 'Cooper City', 'Twin Falls', 'Haverhill', 'Novato', 'Yuba City', 'Grove City', 'Rock Island', 'Lehi', 'Florence', 'Rancho Santa Margarita', 'Brookfield', 'University City', 'Springfield', 'Bozeman', 'Euclid', 'Dearborn', 'Plainfield', 'Woodland', 'Southfield', 'Sanford', 'Manhattan Beach', 'Richland', 'Richfield', 'Kettering', 'Murray', 'Wauwatosa', 'Castle Rock']
+    
+    
+    nyc_specific_places = ['Queens', 'Brooklyn', 'Bronx', 'Staten Island', 'Manhattan', 'New York City']
+    major_us_cities = [city for city in major_us_cities if city not in nyc_specific_places]
+
+    # Create a regular expression pattern to search for state abbreviations and city names
+    pattern = r'\b(?:{}|{})\b'.format('|'.join(us_state_abbreviations), '|'.join(major_us_cities))
+    
+    # Use the regular expression to search for matches in the location string
+    matches = re.findall(pattern, location, re.IGNORECASE)
+
+    # If any matches are found, it means the location contains a US state abbreviation or major US city name
+    return bool(matches)
+
+def extract_city_state(location):
+    if ',' in location:
+        city, state = location.split(',', 1)
+        city = city.strip()
+        state = state.strip()
+        # Check for state signifiers like (Calif), (Tex), (RI), (Minn), etc.
+        state_match = re.match(r"\((.*?)\)", state)
+        if state_match:
+            state = state_match.group(1)
+        return city, state
+    else:
+        # If the location is just the state name, we assume it is the state name for the previous city
+        state_match = re.match(r"\((.*?)\)", location)
+        if state_match:
+            state = state_match.group(1)
+            return cities_mentioned[-1], state.strip()
+        else:
+            return location.strip(), None
+
+def get_cities_from_nyt_archive(year, api_key):
+    base_url = "https://api.nytimes.com/svc/archive/v1"
+    cities_frequency = []
+
+    for month in range(1, 13):
+        endpoint = f"{year}/{month}.json"
+        api_url = f"{base_url}/{endpoint}?api-key={api_key}"
+
+        response = requests.get(api_url)
+        response_json = response.json()
+
+        if 'response' in response_json and 'docs' in response_json['response']:
+            for article in response_json['response']['docs']:
+                for keyword in article.get('keywords', []):
+                    if keyword['name'] == 'glocations':
+                        location = keyword['value']
+                        if is_us_location(location):
+                            city, state = extract_city_state(location)
+                            city_state = f"{city}, {state}" if state else city
+                            cities_frequency.append(city_state)
+
+    return cities_frequency
+
+# Replace 'yourkey' with your actual API key from the NYT API
+api_key = "KEYHERE"
+year = 2023
+
+cities_frequency = get_cities_from_nyt_archive(year, api_key)
+
+# Count the occurrences of each city
+cities_frequency_dict = {}
+for city_state in cities_frequency:
+    cities_frequency_dict[city_state] = cities_frequency_dict.get(city_state, 0) + 1
+
+# Sort the cities by frequency in descending order
+sorted_cities_frequency = dict(sorted(cities_frequency_dict.items(), key=lambda item: item[1], reverse=True))
+
+# Print the frequency chart
+for city_state, frequency in sorted_cities_frequency.items():
+    print(f"{city_state}: {frequency} mentions")
+
+# Save the frequency chart to a CSV file
+csv_filename = f"us_cities_frequency_chart_{year}.csv"
+with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
+    csv_writer = csv.writer(csvfile)
+    csv_writer.writerow(['City', 'Frequency'])
+
+    for city_state, frequency in sorted_cities_frequency.items():
+        csv_writer.writerow([city_state, frequency])
+
+print(f"Frequency chart for US cities in {year} saved to {csv_filename}")
